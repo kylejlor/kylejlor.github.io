@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5; /* Elegant light gray background */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      text-align: center;
+    }
+    nav ul li {
+      display: inline-block; /* Change to inline-block for better control over spacing */
+      margin: 0 20px; /* Increase spacing between links */
+    }
+    nav a {
+      text-decoration: none;
+      color: #333; /* Darker text for better contrast */
+      font-family: 'Arial', sans-serif; /* A more elegant font choice */
+      font-size: 16px; /* Slightly larger font size */
+      padding: 5px 10px; /* Padding for a better click area */
+      border-radius: 5px; /* Rounded corners for a softer look */
+      transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+    }
+    nav a:hover {
+      background-color: #ddd; /* Light background on hover for interactivity */
+      color: #000; /* Change text color on hover */
+    }
+    #about-us-text {
+        display: none;
+        text-align: center;
+        margin-top: 20px;
+        font-family: Arial, sans-serif;
+        color: #333;
+        width: 33.33%; /* Set width to one third of the page */
+        margin-left: auto; /* Center the div horizontally */
+        margin-right: auto;
+        padding: 10px; /* Add some padding for text not to touch the edges */
+        box-sizing: border-box; /* Include padding in the width calculation */
+    }
+</style>
+</head>
+<body>
+
+    <div class="logo">
+        <img src="https://i.ibb.co/Npnc8Hy/Screenshot-2024-05-13-at-3-42-22-PM-removebg-preview.png" alt="Logo">
+    </div> <!-- Assuming a placeholder for the logo -->
+
+    <nav>
+        <ul>
+            <li><a href="#" id="about-us">About Us</a></li>
+            <li><a href="mailto:halflabsbiz@gmail.com">Contact</a></li>
+        </ul>
+        </nav>
+        
+        <div id="about-us-text" style="display: none; text-align: center; margin-top: 20px; font-family: Arial, sans-serif; color: #333;">
+        <p>We're a full-service IT and marketing agency dedicated to helping businesses thrive in the digital age. Our team offers a wide range of services designed to enhance your online presence and drive growth.</p>
+        </div>
+        
+        <script>
+        document.getElementById('about-us').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the default anchor behavior
+            const aboutUsText = document.getElementById('about-us-text');
+            if (aboutUsText.style.display === "none") {
+            aboutUsText.style.display = "block"; // Show the text if it's hidden
+            } else {
+            aboutUsText.style.display = "none"; // Hide the text if it's shown
+            }
+        });
+        </script>
+
+  <script>
+    const navLinks = document.querySelectorAll('nav a');
+
+    navLinks.forEach(link => {
+    link.addEventListener('mouseover', () => {
+        link.style.color = 'black'; // Highlight on hover
+    });
+
+    link.addEventListener('mouseout', () => {
+        link.style.color = '#333'; // Return to original color
+    });
+    });
+  </script>
+  
+</body>
+</html>
